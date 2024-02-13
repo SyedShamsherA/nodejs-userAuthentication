@@ -77,7 +77,7 @@ app.post('/api/reset-password', async (req, res) => {
         }
 
         //Generate and store reset token
-        const resetToken = jwt.sign({ email }, 'your-secret-key', { expiresIn: '1h' });
+        const resetToken = jwt.sign({ email }, 'userauthenticatelogin', { expiresIn: '1h' });
         user.resetToken = resetToken;
         user.resetTokenExpiration = Date.now() + 3600000; // Token expires in 1 hour
         await user.save();
