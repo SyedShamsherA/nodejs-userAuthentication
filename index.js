@@ -87,7 +87,7 @@ app.post('/api/reset-password', async (req, res) => {
             from: 'syedShamsher9174@gmail.com',
             to: email,
             subject: 'Password Reset',
-            text: `Click the following link to reset your password: http://localhost:3000/reset-password/${resetToken}`
+            text: `Click the following link to reset your password: https://user-authentication-zma9.onrender.com/reset-password/${resetToken}`
         }
 
         await transporter.sendMail(mailOptions)
